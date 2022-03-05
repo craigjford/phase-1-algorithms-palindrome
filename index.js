@@ -1,6 +1,19 @@
+
 function isPalindrome(word) {
-  // Write your algorithm here
-}
+
+  const items = word.split('');
+  const revItems = [];
+  let j = items.length;
+
+  for (let i = 0; i < items.length; i++) {
+      j = j - 1;
+      revItems.push(items[j]);
+  }
+
+  let isEqual = JSON.stringify(items) === JSON.stringify(revItems)
+  return isEqual;
+
+} 
 
 /* 
   Add your pseudocode here
